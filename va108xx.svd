@@ -134,9 +134,7 @@
               <description>Reset Counter</description>
               <bitRange>[31:31]</bitRange>
               <access>write-only</access>
-              <modifiedWriteValues>
-                oneToClear
-              </modifiedWriteValues>
+              <modifiedWriteValues>oneToClear</modifiedWriteValues>
             </field>
           </fields>
         </register>
@@ -235,9 +233,7 @@
           <addressOffset>0x034</addressOffset>
           <access>write-only</access>
           <resetValue>0x00000000</resetValue>
-          <modifiedWriteValues>
-            oneToClear
-          </modifiedWriteValues>
+          <modifiedWriteValues>oneToClear</modifiedWriteValues>
         </register>
         <register>
           <name>RAM_SBE</name>
@@ -2016,9 +2012,7 @@
           <description>Clear Interrupt Status Register</description>
           <addressOffset>0x020</addressOffset>
           <access>write-only</access>
-          <modifiedWriteValues>
-            oneToClear
-          </modifiedWriteValues>
+          <modifiedWriteValues>oneToClear</modifiedWriteValues>
         </register>
         <register>
           <name>RXFIFOIRQTRG</name>
@@ -2363,9 +2357,7 @@
           <description>Clear Interrupt Status Register</description>
           <addressOffset>0x034</addressOffset>
           <access>write-only</access>
-          <modifiedWriteValues>
-            oneToClear
-          </modifiedWriteValues>
+          <modifiedWriteValues>oneToClear</modifiedWriteValues>
         </register>
         <register>
           <name>RXFIFOIRQTRG</name>
@@ -2683,9 +2675,7 @@
           <description>Slave Clear Interrupt Status Register</description>
           <addressOffset>0x134</addressOffset>
           <access>write-only</access>
-          <modifiedWriteValues>
-            oneToClear
-          </modifiedWriteValues>
+          <modifiedWriteValues>oneToClear</modifiedWriteValues>
         </register>
         <register>
           <name>S0_RXFIFOIRQTRG</name>
