@@ -3,7 +3,10 @@ name = "va108xx"
 version = "0.1.0"
 edition = "2018"
 description = "Peripheral access API for Vorago VA108XX microcontrollers"
-license = "Apache-2.0 or MIT"
+license = "0BSD"
+homepage = "https://github.com/robamu-org/va108xx-rs"
+repository = "https://github.com/robamu-org/va108xx-rs"
+keywords = ["no-std", "arm", "cortex-m", "vorago", "va108xx"]
 authors = ["Robin Mueller <robin.mueller.m@gmail.com>"]
 
 [dependencies]
