@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+### Added
+
+- Helper script to automate all steps for PAC generation
+
 ## [v0.1.0]
 
 ### Added
