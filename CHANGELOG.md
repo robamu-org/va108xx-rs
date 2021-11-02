@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 
 - Helper script to automate all steps for PAC generation
+- Added badges for README
 
 ## [v0.1.0]
 
