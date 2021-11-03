@@ -1,13 +1,14 @@
 [package]
 name = "va108xx"
 version = "0.1.0"
+authors = ["Robin Mueller <robin.mueller.m@gmail.com>"]
 edition = "2018"
-description = "Peripheral access API for Vorago VA108XX microcontrollers"
-license = "MIT OR Apache-2.0"
+description = "PAC for the Vorago VA108xx family of microcontrollers"
 homepage = "https://github.com/robamu-org/va108xx-rs"
 repository = "https://github.com/robamu-org/va108xx-rs"
+license = "MIT OR Apache-2.0"
 keywords = ["no-std", "arm", "cortex-m", "vorago", "va108xx"]
-authors = ["Robin Mueller <robin.mueller.m@gmail.com>"]
+categories = ["embedded", "no-std", "hardware-support"]
 
 [dependencies]
 cortex-m = "0.7.3"
