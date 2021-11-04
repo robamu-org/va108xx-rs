@@ -12,6 +12,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - Relicensed under dual Apache-2.0 / MIT license
 
+### Changed
+
+- SVD file handling improved and new fields added for the peripheral
+  clock enable register
+
 ### Added
 
 - Helper script to automate all steps for PAC generation
