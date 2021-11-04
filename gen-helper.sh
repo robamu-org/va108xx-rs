@@ -15,7 +15,7 @@ if [ -x "$(${svd2rust_bin} --version)" ]; then
 		"Install it with cargo install svd2rust"
 	exit
 fi
-${svd2rust_bin} -i va108xx.svd
+${svd2rust_bin} -i svd/va108xx-base.svd.patched
 rm -rf src
 form -i lib.rs -o src/ && rm lib.rs
 cargo fmt

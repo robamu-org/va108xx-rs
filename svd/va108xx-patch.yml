@@ -1,0 +1,59 @@
+_svd: va108xx-base.svd
+
+SYSCONFIG:
+  PERIPHERAL_CLK_ENABLE:
+    _add:
+        PORTA:
+          description: Enable PORTA clock
+          bitOffset: 0
+          bitWidth: 1
+        PORTB:
+          description: Enable PORTB clock
+          bitOffset: 1
+          bitWidth: 1
+        SPI_0:
+          description: Enable SPI[0] clock
+          bitOffset: 4
+          bitWidth: 1
+        SPI_1:
+          description: Enable SPI[1] clock
+          bitOffset: 5
+          bitWidth: 1
+        SPI_2:
+          description: Enable SPI[2] clock
+          bitOffset: 6
+          bitWidth: 1
+        UART_0:
+          description: Enable UART[0] clock
+          bitOffset: 8
+          bitWidth: 1
+        UART_1:
+          description: Enable UART[1] clock
+          bitOffset: 9
+          bitWidth: 1
+        I2C_0:
+          description: Enable I2C[0] clock
+          bitOffset: 16
+          bitWidth: 1
+        I2C_1:
+          description: Enable I2C[1] clock
+          bitOffset: 17
+          bitWidth: 1
+        IRQSEL:
+          description: Enable IRQ selector clock
+          bitOffset: 21
+          bitWidth: 1
+        IOCONFIG:
+          description: Enable IO Configuration block clock
+          bitOffset: 22
+          bitWidth: 1
+        UTILITY:
+          description: Enable utility clock
+          bitOffset: 23
+          bitWidth: 1
+        GPIO:
+          description: Enable GPIO clock
+          bitOffset: 24
+          bitWidth: 1
+
+
