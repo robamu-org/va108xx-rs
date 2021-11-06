@@ -10,6 +10,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [v0.2.0]
 
+## [v0.1.1]
+
 - Relicensed under dual Apache-2.0 / MIT license
 
 ### Changed
