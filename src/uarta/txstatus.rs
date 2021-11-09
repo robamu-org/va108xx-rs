@@ -92,7 +92,7 @@ impl R {
     #[doc = "Bit 0 - Write Fifo NOT Full"]
     #[inline(always)]
     pub fn wrrdy(&self) -> WRRDY_R {
-        WRRDY_R::new(self.bits != 0)
+        WRRDY_R::new((self.bits & 0x01) != 0)
     }
     #[doc = "Bit 1 - Write Fifo Full"]
     #[inline(always)]

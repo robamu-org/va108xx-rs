@@ -67,7 +67,7 @@ impl<'a> I2CIDLE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = value as u32;
+        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
         self.w
     }
 }
@@ -556,7 +556,7 @@ impl R {
     #[doc = "Bit 0 - I2C Bus is Idle"]
     #[inline(always)]
     pub fn i2cidle(&self) -> I2CIDLE_R {
-        I2CIDLE_R::new(self.bits != 0)
+        I2CIDLE_R::new((self.bits & 0x01) != 0)
     }
     #[doc = "Bit 1 - Controller is Idle"]
     #[inline(always)]

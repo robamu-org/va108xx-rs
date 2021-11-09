@@ -67,7 +67,7 @@ impl<'a> LBM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = value as u32;
+        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
         self.w
     }
 }
@@ -398,7 +398,7 @@ impl R {
     #[doc = "Bit 0 - Loop Back"]
     #[inline(always)]
     pub fn lbm(&self) -> LBM_R {
-        LBM_R::new(self.bits != 0)
+        LBM_R::new((self.bits & 0x01) != 0)
     }
     #[doc = "Bit 1 - Enable"]
     #[inline(always)]

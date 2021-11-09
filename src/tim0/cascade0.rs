@@ -57,7 +57,7 @@ impl<'a> CASSEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = value as u32;
+        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
         self.w
     }
 }
@@ -65,7 +65,7 @@ impl R {
     #[doc = "Bits 0:7 - Cascade Selection"]
     #[inline(always)]
     pub fn cassel(&self) -> CASSEL_R {
-        CASSEL_R::new(self.bits as u8)
+        CASSEL_R::new((self.bits & 0xff) as u8)
     }
 }
 impl W {

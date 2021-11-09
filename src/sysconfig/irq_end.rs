@@ -77,7 +77,7 @@ impl R {
     #[doc = "Bit 0 - RAM Single Bit Interrupt"]
     #[inline(always)]
     pub fn ramsbe(&self) -> RAMSBE_R {
-        RAMSBE_R::new(self.bits != 0)
+        RAMSBE_R::new((self.bits & 0x01) != 0)
     }
     #[doc = "Bit 1 - RAM Multi Bit Interrupt"]
     #[inline(always)]

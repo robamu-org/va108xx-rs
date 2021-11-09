@@ -77,7 +77,7 @@ impl R {
     #[doc = "Bit 0 - RX Overrun"]
     #[inline(always)]
     pub fn rorim(&self) -> RORIM_R {
-        RORIM_R::new(self.bits != 0)
+        RORIM_R::new((self.bits & 0x01) != 0)
     }
     #[doc = "Bit 1 - RX Timeout"]
     #[inline(always)]

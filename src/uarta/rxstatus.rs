@@ -182,7 +182,7 @@ impl R {
     #[doc = "Bit 0 - Read Data Available"]
     #[inline(always)]
     pub fn rdavl(&self) -> RDAVL_R {
-        RDAVL_R::new(self.bits != 0)
+        RDAVL_R::new((self.bits & 0x01) != 0)
     }
     #[doc = "Bit 1 - Read Fifo NOT Full"]
     #[inline(always)]

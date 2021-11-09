@@ -137,7 +137,7 @@ impl R {
     #[doc = "Bit 0 - Transmit FIFO empty"]
     #[inline(always)]
     pub fn tfe(&self) -> TFE_R {
-        TFE_R::new(self.bits != 0)
+        TFE_R::new((self.bits & 0x01) != 0)
     }
     #[doc = "Bit 1 - Transmit FIFO not full"]
     #[inline(always)]

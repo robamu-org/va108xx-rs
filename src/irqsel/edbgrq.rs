@@ -32,7 +32,7 @@ impl R {
     #[doc = "Bit 0 - Active"]
     #[inline(always)]
     pub fn active(&self) -> ACTIVE_R {
-        ACTIVE_R::new(self.bits != 0)
+        ACTIVE_R::new((self.bits & 0x01) != 0)
     }
 }
 #[doc = "EDBGRQ Status Register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [edbgrq](index.html) module"]

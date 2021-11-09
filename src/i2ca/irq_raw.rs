@@ -227,7 +227,7 @@ impl R {
     #[doc = "Bit 0 - I2C Bus is Idle"]
     #[inline(always)]
     pub fn i2cidle(&self) -> I2CIDLE_R {
-        I2CIDLE_R::new(self.bits != 0)
+        I2CIDLE_R::new((self.bits & 0x01) != 0)
     }
     #[doc = "Bit 1 - Controller is Idle"]
     #[inline(always)]

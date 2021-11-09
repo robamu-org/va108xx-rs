@@ -57,7 +57,7 @@ impl<'a> SYND_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value as u32;
+        self.w.bits = (self.w.bits & !0x000f_ffff) | (value as u32 & 0x000f_ffff);
         self.w
     }
 }
@@ -65,7 +65,7 @@ impl R {
     #[doc = "Bits 0:19 - Trap Syndrom Bits"]
     #[inline(always)]
     pub fn synd(&self) -> SYND_R {
-        SYND_R::new(self.bits as u32)
+        SYND_R::new((self.bits & 0x000f_ffff) as u32)
     }
 }
 impl W {
