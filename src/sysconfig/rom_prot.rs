@@ -67,7 +67,7 @@ impl<'a> WREN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = value as u32;
+        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
         self.w
     }
 }
@@ -75,7 +75,7 @@ impl R {
     #[doc = "Bit 0 - ROM Write Enable Bit"]
     #[inline(always)]
     pub fn wren(&self) -> WREN_R {
-        WREN_R::new(self.bits != 0)
+        WREN_R::new((self.bits & 0x01) != 0)
     }
 }
 impl W {

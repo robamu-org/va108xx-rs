@@ -57,7 +57,7 @@ impl<'a> SIZE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = value as u32;
+        self.w.bits = (self.w.bits & !0x0f) | (value as u32 & 0x0f);
         self.w
     }
 }
@@ -166,7 +166,7 @@ impl R {
     #[doc = "Bits 0:3 - Data Size(0x3=>4, 0xf=>16)"]
     #[inline(always)]
     pub fn size(&self) -> SIZE_R {
-        SIZE_R::new(self.bits as u8)
+        SIZE_R::new((self.bits & 0x0f) as u8)
     }
     #[doc = "Bit 6 - SPI Clock Polarity"]
     #[inline(always)]

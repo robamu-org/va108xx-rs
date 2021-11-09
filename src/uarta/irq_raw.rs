@@ -122,7 +122,7 @@ impl R {
     #[doc = "Bit 0 - RX Interrupt"]
     #[inline(always)]
     pub fn irq_rx(&self) -> IRQ_RX_R {
-        IRQ_RX_R::new(self.bits != 0)
+        IRQ_RX_R::new((self.bits & 0x01) != 0)
     }
     #[doc = "Bit 1 - RX Status Interrupt"]
     #[inline(always)]

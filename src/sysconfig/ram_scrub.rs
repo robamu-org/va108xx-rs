@@ -57,7 +57,7 @@ impl<'a> VALUE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value as u32;
+        self.w.bits = (self.w.bits & !0x00ff_ffff) | (value as u32 & 0x00ff_ffff);
         self.w
     }
 }
@@ -87,7 +87,7 @@ impl R {
     #[doc = "Bits 0:23 - Counter divide value"]
     #[inline(always)]
     pub fn value(&self) -> VALUE_R {
-        VALUE_R::new(self.bits as u32)
+        VALUE_R::new((self.bits & 0x00ff_ffff) as u32)
     }
 }
 impl W {

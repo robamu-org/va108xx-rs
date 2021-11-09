@@ -14,6 +14,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - Relicensed under dual Apache-2.0 / MIT license
 
+### Fixed
+
+- Generated with patched version of `svd2rust`: See 
+  https://github.com/rust-embedded/svd2rust/pull/549 for more details.
+  Some bitmasks were missing from register reader definitions.
+
 ### Changed
 
 - SVD file handling improved and new fields added for the peripheral

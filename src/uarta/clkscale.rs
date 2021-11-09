@@ -57,7 +57,7 @@ impl<'a> FRAC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = value as u32;
+        self.w.bits = (self.w.bits & !0x3f) | (value as u32 & 0x3f);
         self.w
     }
 }
@@ -114,7 +114,7 @@ impl R {
     #[doc = "Bits 0:5 - Fractional Divide (64ths)"]
     #[inline(always)]
     pub fn frac(&self) -> FRAC_R {
-        FRAC_R::new(self.bits as u8)
+        FRAC_R::new((self.bits & 0x3f) as u8)
     }
     #[doc = "Bits 6:23 - Integer Divide"]
     #[inline(always)]

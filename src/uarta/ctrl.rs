@@ -67,7 +67,7 @@ impl<'a> PAREN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = value as u32;
+        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
         self.w
     }
 }
@@ -435,7 +435,7 @@ impl R {
     #[doc = "Bit 0 - Parity Enable"]
     #[inline(always)]
     pub fn paren(&self) -> PAREN_R {
-        PAREN_R::new(self.bits != 0)
+        PAREN_R::new((self.bits & 0x01) != 0)
     }
     #[doc = "Bit 1 - Parity Even/Odd(1/0)"]
     #[inline(always)]

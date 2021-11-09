@@ -158,7 +158,7 @@ impl<'a> FLTTYPE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = value as u32;
+        self.w.bits = (self.w.bits & !0x07) | (value as u32 & 0x07);
         self.w
     }
 }
@@ -516,7 +516,7 @@ impl R {
     #[doc = "Bits 0:2 - Input Filter Selectoin"]
     #[inline(always)]
     pub fn flttype(&self) -> FLTTYPE_R {
-        FLTTYPE_R::new(self.bits as u8)
+        FLTTYPE_R::new((self.bits & 0x07) as u8)
     }
     #[doc = "Bits 3:5 - Input Filter Clock Selection"]
     #[inline(always)]
