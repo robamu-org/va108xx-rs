@@ -10,15 +10,17 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [v0.2.0]
 
-## [v0.1.1]
-
-- Relicensed under dual Apache-2.0 / MIT license
+## [v0.1.2]
 
 ### Fixed
 
 - Generated with patched version of `svd2rust`: See 
   https://github.com/rust-embedded/svd2rust/pull/549 for more details.
   Some bitmasks were missing from register reader definitions.
+
+## [v0.1.1]
+
+- Relicensed under dual Apache-2.0 / MIT license
 
 ### Changed
 
