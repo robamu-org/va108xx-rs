@@ -56,4 +56,18 @@ SYSCONFIG:
           bitOffset: 24
           bitWidth: 1
 
-
+# I2CB is derived from I2CA
+I2CA:
+  _modify:
+    STATUS:
+      access: read-only
+  STATUS:
+    _add:
+      I2C_IDLE:
+        description: I2C bus is Idle
+        bitOffset: 0
+        bitWidth: 1
+      IDLE:
+        description: Controller is Idle
+        bitOffset: 1
+        bitWidth: 1

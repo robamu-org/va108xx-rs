@@ -2157,7 +2157,7 @@
           <name>STATUS</name>
           <description>I2C Controller Status Register</description>
           <addressOffset>0x018</addressOffset>
-          <fields>
+          <access>read-only</access><fields>
             <field>
               <name>WAITING</name>
               <description>Controller is Waiting</description>
@@ -2223,7 +2223,9 @@
               <description>I2C Raw SCL value</description>
               <bitRange>[31:31]</bitRange>
             </field>
-          </fields>
+          <field><name>I2C_IDLE</name><description>I2C bus is Idle</description><bitOffset>0</bitOffset><bitWidth>1</bitWidth></field>
+            <field><name>IDLE</name><description>Controller is Idle</description><bitOffset>1</bitOffset><bitWidth>1</bitWidth></field>
+            </fields>
         </register>
         <register>
           <name>STATE</name>
