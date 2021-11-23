@@ -8,7 +8,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-## [v0.2.0]
+## [v0.1.3]
+
+### Added
+
+- Added two missing bit fields for I2CA STATUS register: I2CIDLE and IDLE
+
+### Fixed
+
+- Made I2CA STATUS register read-only
 
 ## [v0.1.2]
 
